@@ -55,6 +55,14 @@ class UserTestingApplicationTests {
     }
 
     @Test
+    public void testReset(){
+        counter.resetCount(10);
+        assertEquals(10, counter.getDisplayedCount());
+        counter.resetCount(0);
+        assertEquals(0, counter.getDisplayedCount());
+    }
+
+    @Test
     void contextLoads() {
     }
 
