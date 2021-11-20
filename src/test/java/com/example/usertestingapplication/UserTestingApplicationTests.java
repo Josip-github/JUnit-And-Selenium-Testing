@@ -45,6 +45,7 @@ class UserTestingApplicationTests {
         assertEquals(value + 1, counter.getDisplayedCount());
     }
 
+    @Test
     public void testIncrementTenTimes(){
         int value = counter.getDisplayedCount();
         for(int i = 0; i < 10; i++){
