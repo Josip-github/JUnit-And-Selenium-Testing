@@ -25,4 +25,9 @@ public class CounterController {
         result.setValue(0);
         return result;
     }
+
+    @ModelAttribute("count")
+    public int initCount(){
+        return count.get();
+    }
 }
