@@ -3,6 +3,7 @@ package com.example.usertestingapplication;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -27,6 +28,12 @@ class UserTestingApplicationTests {
     @AfterAll
     public static void afterAll(){
         driver.quit();
+    }
+
+    @BeforeEach
+    public void beforeEach(){
+        driver.get("http://localhost:" + port + "/counter");
+        counter = new CounterPage(driver);
     }
 
     @Test
