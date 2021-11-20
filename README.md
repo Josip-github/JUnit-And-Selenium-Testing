@@ -1,0 +1,1 @@
+Developing this project had 3 steps. First, a simple and basic Spring Boot App has been developed. Second, Selenium's Page object has been developed in the form of CounterPage class. Third, testing of the app has been applied through a combination od Selenium and JUnit.
