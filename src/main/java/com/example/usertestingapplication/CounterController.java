@@ -3,6 +3,7 @@ package com.example.usertestingapplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.concurrent.atomic.AtomicInteger;
@@ -16,5 +17,12 @@ public class CounterController {
     @GetMapping
     public String getCounterPage(Model model){
         return "counter";
+    }
+
+    @ModelAttribute("resetForm")
+    public ResetForm initResetForm(){
+        ResetForm result = new ResetForm();
+        result.setValue(0);
+        return result;
     }
 }
