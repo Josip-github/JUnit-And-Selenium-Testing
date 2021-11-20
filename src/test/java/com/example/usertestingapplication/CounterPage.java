@@ -27,5 +27,8 @@ public class CounterPage {
         return Integer.parseInt(countDisplay.getText());
     }
 
+    public void incrementCount(){
+        incrementButton.click();
+    }
 
 }
