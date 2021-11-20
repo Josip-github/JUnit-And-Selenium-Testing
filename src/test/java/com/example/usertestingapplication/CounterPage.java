@@ -22,4 +22,10 @@ public class CounterPage {
     public CounterPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
+
+    public int getDisplayedCount(){
+        return Integer.parseInt(countDisplay.getText());
+    }
+
+
 }
