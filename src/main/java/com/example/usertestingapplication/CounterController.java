@@ -37,4 +37,12 @@ public class CounterController {
         model.addAttribute("count", count.incrementAndGet());
         return "counter";
     }
+
+    @PostMapping("/reset")
+    public String reset(ResetForm form, Model model){
+        count.set(form.getValue());
+        model.addAttribute("count", form.getValue());
+        form.setValue(0);
+        return "counter";
+    }
 }
