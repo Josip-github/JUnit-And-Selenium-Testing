@@ -1,7 +1,9 @@
 package com.example.usertestingapplication;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class CounterPage {
 
@@ -17,4 +19,7 @@ public class CounterPage {
     @FindBy(id = "reset-button") // counter.html line 23
     private WebElement resetButton;
 
+    public CounterPage(WebDriver driver) {
+        PageFactory.initElements(driver, this);
+    }
 }
