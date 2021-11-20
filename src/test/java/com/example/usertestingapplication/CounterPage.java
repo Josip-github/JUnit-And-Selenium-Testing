@@ -31,4 +31,10 @@ public class CounterPage {
         incrementButton.click();
     }
 
+    public void resetCount(int value){
+        resetValueField.clear();
+        resetValueField.sendKeys(String.valueOf(value));
+        resetButton.click();
+    }
+
 }
